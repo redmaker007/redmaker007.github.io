@@ -1,13 +1,295 @@
 <!doctype html>
-<html>
-<head><meta charset="utf-8"><title>Tin Yu Kwong</title></head>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tin Yu Kwong | Portfolio</title>
+  <meta name="description" content="Tin Yu Kwong — CS @ MSU. SWE + Game Dev portfolio." />
+  <style>
+    :root {
+      --bg: #0b1220;
+      --card: #121b2f;
+      --text: #e8eefc;
+      --muted: #aebbd6;
+      --line: rgba(255,255,255,.10);
+      --chip: rgba(255,255,255,.08);
+      --shadow: 0 12px 30px rgba(0,0,0,.35);
+      --radius: 18px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1100px 600px at 20% 10%, rgba(90,140,255,.25), transparent 60%),
+                  radial-gradient(900px 500px at 90% 30%, rgba(255,140,170,.18), transparent 55%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .wrap { max-width: 980px; margin: 0 auto; padding: 34px 18px 56px; }
+
+    header {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
+      padding: 22px 20px;
+    }
+
+    .top {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    h1 { margin: 0; font-size: 28px; letter-spacing: .2px; }
+    .tagline { margin: 6px 0 0; color: var(--muted); }
+
+    .btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      transition: transform .08s ease, background .12s ease;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    .btn:hover { background: rgba(255,255,255,.09); transform: translateY(-1px); text-decoration: none; }
+    .btn small { font-weight: 700; opacity: .85; }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+      margin-top: 16px;
+    }
+
+    .card {
+      grid-column: span 12;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      border-radius: var(--radius);
+      padding: 18px;
+      box-shadow: 0 10px 22px rgba(0,0,0,.22);
+    }
+
+    @media (min-width: 840px) {
+      .card.half { grid-column: span 6; }
+      .card.third { grid-column: span 4; }
+    }
+
+    h2 {
+      margin: 28px 0 12px;
+      font-size: 18px;
+      letter-spacing: .2px;
+      color: #f3f6ff;
+    }
+
+    .proj-title {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 8px;
+    }
+
+    .proj-title h3 { margin: 0; font-size: 16px; }
+    .meta { color: var(--muted); font-size: 13px; }
+
+    ul { margin: 10px 0 0 18px; padding: 0; }
+    li { margin: 6px 0; color: var(--text); }
+    li span { color: var(--muted); }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+    .chip {
+      font-size: 12px;
+      color: var(--muted);
+      padding: 6px 10px;
+      background: var(--chip);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+    }
+
+    .footer {
+      margin-top: 22px;
+      color: var(--muted);
+      font-size: 13px;
+      text-align: center;
+    }
+
+    .note {
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 10px;
+    }
+
+    .links-inline a {
+      font-weight: 700;
+      border-bottom: 1px dashed rgba(255,255,255,.25);
+      padding-bottom: 1px;
+    }
+    .links-inline a:hover { border-bottom-style: solid; text-decoration: none; }
+  </style>
+</head>
+
 <body>
-  <h1>Tin Yu Kwong</h1>
-  <p>CS @ MSU • SWE + Game Dev</p>
-  <p>
-    <a href="https://github.com/redmaker007">GitHub</a> |
-    <a href="https://redmaker007.itch.io/fffight">FFFight</a>
-  </p>
+  <div class="wrap">
+    <header>
+      <div class="top">
+        <div>
+          <h1>Tin Yu Kwong</h1>
+          <p class="tagline">Computer Science @ Michigan State University • SWE + Game Development</p>
+        </div>
+        <div class="meta">East Lansing, MI</div>
+      </div>
+
+      <div class="btns">
+        <a class="btn" href="https://github.com/redmaker007" target="_blank" rel="noreferrer">
+          <small>GitHub</small>
+        </a>
+        <a class="btn" href="https://redmaker007.itch.io/fffight" target="_blank" rel="noreferrer">
+          <small>Itch.io</small> FFFight
+        </a>
+        <a class="btn" href="https://redmaker007.itch.io/schuttle-table" target="_blank" rel="noreferrer">
+          <small>Itch.io</small> Shuttle Table
+        </a>
+        <!-- TODO: replace with your real LinkedIn -->
+        <a class="btn" href="https://linkedin.com/in/tin-yu-kwong" target="_blank" rel="noreferrer">
+          <small>LinkedIn</small>
+        </a>
+        <!-- TODO: upload resume.pdf to this repo root and keep this link -->
+        <a class="btn" href="./resume.pdf" target="_blank" rel="noreferrer">
+          <small>Resume</small> PDF
+        </a>
+        <a class="btn" href="mailto:kwongtin@gmail.com">
+          <small>Email</small> kwongtin@gmail.com
+        </a>
+      </div>
+
+      <p class="note">
+        I build reliable software systems and playable prototypes. I enjoy modular design, debugging, and shipping projects end-to-end.
+      </p>
+    </header>
+
+    <h2>Featured Projects</h2>
+    <div class="grid">
+      <section class="card half">
+        <div class="proj-title">
+          <h3>FFFight (Godot)</h3>
+          <div class="meta links-inline">
+            <a href="https://redmaker007.itch.io/fffight" target="_blank" rel="noreferrer">Play</a>
+            <span>•</span>
+            <a href="https://github.com/redmaker007" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </div>
+        <div class="meta">5 playable characters • 4 hex/debuff effects • 13 original drawings</div>
+        <ul>
+          <li>Built a modular <span>active-effect + stat modifier</span> system for debuffs/hex mechanics.</li>
+          <li>Implemented a <span>Game Manager + state machine</span> to keep gameplay flow extensible.</li>
+          <li>Added reusable systems: <span>unit/enemy spawners</span>, minion management, and economy.</li>
+        </ul>
+        <div class="chips">
+          <div class="chip">Godot</div>
+          <div class="chip">GDScript</div>
+          <div class="chip">State Machine</div>
+          <div class="chip">Gameplay Systems</div>
+        </div>
+      </section>
+
+      <section class="card half">
+        <div class="proj-title">
+          <h3>To-Do List App</h3>
+          <div class="meta links-inline">
+            <!-- TODO: replace with your repo link if you have one -->
+            <a href="https://github.com/redmaker007" target="_blank" rel="noreferrer">Code</a>
+          </div>
+        </div>
+        <div class="meta">Ranking logic • JSON persistence • UI workflow</div>
+        <ul>
+          <li>Designed a task data model (importance/urgency/energy/time) and built ranking logic.</li>
+          <li>Implemented create/edit UI and <span>save/load</span> via JSON persistence.</li>
+          <li>Hardened edge cases and documented setup and usage in a README.</li>
+        </ul>
+        <div class="chips">
+          <div class="chip">GDScript</div>
+          <div class="chip">JSON</div>
+          <div class="chip">Debugging</div>
+          <div class="chip">Documentation</div>
+        </div>
+      </section>
+
+      <section class="card third">
+        <div class="proj-title">
+          <h3>Shuttle Table</h3>
+          <div class="meta links-inline">
+            <a href="https://redmaker007.itch.io/schuttle-table" target="_blank" rel="noreferrer">Play</a>
+          </div>
+        </div>
+        <ul>
+          <li>Built and shipped a small prototype focused on core mechanics and a clear loop.</li>
+          <li>Iterated quickly based on playtesting and feel.</li>
+        </ul>
+        <div class="chips">
+          <div class="chip">Godot</div>
+          <div class="chip">Rapid Prototyping</div>
+        </div>
+      </section>
+
+      <section class="card third">
+        <div class="proj-title">
+          <h3>Skills</h3>
+          <div class="meta">What I use often</div>
+        </div>
+        <div class="chips">
+          <div class="chip">Git/GitHub</div>
+          <div class="chip">OOP</div>
+          <div class="chip">Signals/Event-driven</div>
+          <div class="chip">Debugging</div>
+          <div class="chip">JSON Persistence</div>
+          <div class="chip">Aseprite</div>
+        </div>
+        <p class="note">Open to SWE and Game Dev internships.</p>
+      </section>
+
+      <section class="card third">
+        <div class="proj-title">
+          <h3>Contact</h3>
+          <div class="meta">Let’s connect</div>
+        </div>
+        <p class="note">
+          Email: <span class="links-inline"><a href="mailto:kwongtin@gmail.com">kwongtin@gmail.com</a></span><br />
+          GitHub: <span class="links-inline"><a href="https://github.com/redmaker007" target="_blank" rel="noreferrer">github.com/redmaker007</a></span><br />
+          Itch: <span class="links-inline"><a href="https://redmaker007.itch.io/fffight" target="_blank" rel="noreferrer">redmaker007.itch.io</a></span>
+        </p>
+      </section>
+    </div>
+
+    <div class="footer">
+      © <span id="y"></span> Tin Yu Kwong • Built with GitHub Pages
+    </div>
+  </div>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
-
